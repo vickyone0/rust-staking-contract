@@ -1,4 +1,5 @@
 Rust Staking Contract
+
 This project demonstrates how to interact with a Solidity-based staking smart contract using Rust. It allows users to stake, unstake, and check their staked balance using the ethers-rs library.
 
 Table of Contents
