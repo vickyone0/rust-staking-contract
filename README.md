@@ -135,11 +135,7 @@ ethers-rs for the Rust Ethereum library.
 
 Hardhat for local blockchain development.
 
-<p style="font-family: 'Courier New'; font-size: 14px; color: gray;"> Made with ❤️ by Your Name </p>
-Screenshot
-Staking Contract Demo
-
-Copy
+<p style="font-family: 'Courier New'; font-size: 14px; color: gray;"> Made with ❤️ by Vignesh </p>
 
 ---
 
