@@ -138,19 +138,3 @@ Hardhat for local blockchain development.
 <p style="font-family: 'Courier New'; font-size: 14px; color: gray;"> Made with ❤️ by Vignesh </p>
 
 ---
-
-### **How to Use This Raw Markdown**:
-1. Copy the entire text above.
-2. Paste it into a new file named `README.md` in your project's root directory.
-3. Customize the placeholders (e.g., `your-username`, `your-private-key`, `0xYourContractAddress`) with your actual values.
-4. Push the changes to your GitHub repository.
-
-This is the **raw form** of the `README.md` file, including all Markdown syntax and placeholders. When rendered on GitHub, it will display with proper formatting. 🚀
-
-
-## **Setup** ⚙️
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/rust-staking-contract.git
-   cd rust-staking-contract
