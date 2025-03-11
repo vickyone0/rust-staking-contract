@@ -37,6 +37,120 @@ Before running the project, ensure you have the following installed:
 4. **Environment Variables**: Set up a `.env` file with the required variables (see [Setup](#setup)).
 
 ---
+Install Dependencies:
+
+Install Rust dependencies:
+
+bash
+Copy
+cargo build
+Set Up Environment Variables:
+
+Create a .env file in the root directory and add the following variables:
+
+env
+Copy
+RPC_URL="http://localhost:8545" # Replace with your Ethereum node URL
+PRIVATE_KEY="your-private-key"   # Replace with your wallet's private key
+CONTRACT_ADDRESS="0xYourContractAddress" # Replace with your deployed contract address
+Deploy the Smart Contract:
+
+If you haven't deployed the staking contract yet, deploy it using Hardhat, Remix, or another tool.
+
+Update the CONTRACT_ADDRESS in the .env file with the deployed contract address.
+
+ABI File:
+
+Place the ABI JSON file (abi.json) in the src/ directory. This file is generated when you compile your Solidity contract.
+
+Usage
+Build the Project:
+
+bash
+Copy
+cargo build
+Run the Program:
+
+bash
+Copy
+cargo run
+The program will:
+
+Stake 100 tokens.
+
+Unstake 50 tokens.
+
+Check and print the staked balance of the wallet.
+
+Example Output:
+
+Copy
+Staked 100 tokens. Tx Hash: 0x...
+Unstaked 50 tokens. Tx Hash: 0x...
+Staked Balance: 50
+Smart Contract
+The Solidity smart contract used in this project should have the following methods:
+
+solidity
+Copy
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract StakingContract {
+    mapping(address => uint256) public stakedBalances;
+
+    function stake(uint256 amount) public {
+        stakedBalances[msg.sender] += amount;
+    }
+
+    function unstake(uint256 amount) public {
+        require(stakedBalances[msg.sender] >= amount, "Insufficient balance");
+        stakedBalances[msg.sender] -= amount;
+    }
+
+    function getStakedBalance(address user) public view returns (uint256) {
+        return stakedBalances[user];
+    }
+}
+Deploy this contract to your blockchain network.
+
+Compile the contract and save the ABI to src/abi.json.
+
+Contributing
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+
+Fork the repository.
+
+Create a new branch for your feature or bugfix.
+
+Commit your changes.
+
+Submit a pull request.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Acknowledgments
+ethers-rs for the Rust Ethereum library.
+
+Hardhat for local blockchain development.
+
+<p style="font-family: 'Courier New'; font-size: 14px; color: gray;"> Made with ❤️ by Your Name </p>
+Screenshot
+Staking Contract Demo
+
+Copy
+
+---
+
+### **How to Use This Raw Markdown**:
+1. Copy the entire text above.
+2. Paste it into a new file named `README.md` in your project's root directory.
+3. Customize the placeholders (e.g., `your-username`, `your-private-key`, `0xYourContractAddress`) with your actual values.
+4. Push the changes to your GitHub repository.
+
+This is the **raw form** of the `README.md` file, including all Markdown syntax and placeholders. When rendered on GitHub, it will display with proper formatting. 🚀
+
 
 ## **Setup** ⚙️
 
